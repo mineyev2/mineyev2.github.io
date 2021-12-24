@@ -18,8 +18,12 @@ function setup() {
 	h = window.innerHeight * 1.2;
 	w = window.innerWidth;
   	canvas = createCanvas(w, h);
-  	canvas.parent("canv")
-	background(0);
+	// don't really know if this is necessary
+	canvas.style('display', 'block');
+	// canvas.style('z-index', '-2');
+  	canvas.parent("canv");
+	// background(0);
+	// background.style('z-index', '-2');
 }
 
 function draw() {
@@ -30,6 +34,7 @@ function draw() {
 	// img element, positioning it over top of
 	// the canvas.
 	gif_createImg.position(0, 0);
+	gif_createImg.style('z-index', '-2');
 }
 
 window.onresize = function() {
