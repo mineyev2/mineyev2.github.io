@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('assets/slkscreb.ttf');
+}
+
 #main  {
 	position: relative;
 	margin: 0; 
@@ -20,30 +25,19 @@ canvas {
 }
 
 .title {
-	font-family: 'Courier New', monospace;
+	font-family: 'MyWebFont';
 	font-size: 40px;
 	position: absolute;
 	left: 0;
-    line-height: 200px;
-    margin-top: 20%;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 100%;
+  line-height: 200px;
+  margin-top: 20%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  animation: flicker 1s 
 }
 
-/* DEMO-SPECIFIC STYLES */
-.typewriter h1 {
-  color: #fff;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid blueviolet; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
-}
 
 .popup h1 {
   color: #fff;
@@ -53,12 +47,56 @@ canvas {
   white-space: nowrap; /* Keeps the content on a single line */
   letter-spacing: .15em; /* Adjust as needed */
   top: 50%;
-  left: 50%;
   text-align:center;
 }
 
+@keyframes flicker {
+	0% {
+		opacity: 0.15;
+	}
+	5% {
+		opacity: 0.2;
+	}
+	10% {
+		opacity: 0.12;
+	}
+	15% {
+		opacity: 0.2;
+	}
+	25% {
+		opacity: 0.15;
+	}
+	30% {
+		opacity: 0.4;
+	}
+	35% {
+		opacity: 0.05;
+	}
+	40% {
+		opacity: 0.12;
+	}
+	45% {
+		opacity: 0.15;
+	}
+	60% {
+		opacity: 0.3;
+	}
+	70% {
+		opacity: 0.2;
+	}
+	80% {
+		opacity: 0.3;
+	}
+	90% {
+		opacity: 0.18;
+	}
+	100% {
+		opacity: 0.3;
+	}
+}
 
 h2 {
+  font-size: 25px;
   margin: 0;
   padding: 0;
   color: #fff;
