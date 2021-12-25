@@ -22,19 +22,16 @@ function setup() {
 	canvas.style('display', 'block');
 	// canvas.style('z-index', '-2');
   	canvas.parent("canv");
-	// background(0);
+	
+	// deleted background, dunno if I should or not
+	background('rgba(0,0,0, 0.6)');
 	// background.style('z-index', '-2');
 }
 
 function draw() {
-	// loads only first frame
-	// image(gif_loadImg, 50, 50);
-	
-	// updates animation frames by using an html
-	// img element, positioning it over top of
-	// the canvas.
+
 	gif_createImg.position(0, 0);
-	gif_createImg.style('z-index', '-2');
+	gif_createImg.style('z-index', '-3');
 }
 
 window.onresize = function() {

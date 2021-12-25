@@ -45,6 +45,19 @@ canvas {
     blink-caret .5s step-end infinite;
 }
 
+.popup h1 {
+  color: #fff;
+  font-family: monospace;
+  /* overflow: hidden; */
+  /* border-right: .15em solid blueviolet; */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .15em; /* Adjust as needed */
+  top: 50%;
+  left: 50%;
+  text-align:center;
+}
+
+
 h2 {
   margin: 0;
   padding: 0;
