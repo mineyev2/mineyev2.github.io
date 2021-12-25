@@ -25,33 +25,71 @@
 		<div class="popup">
 			<h1 class="title" id="title">CHIDI BEATS</h1>
 		</div>
-		<div class="footer">
-			<div class="dock">
-				<script>
-					window.onload = initDivMouseOver;
-
-					function initDivMouseOver() {
-						var beat = document.getElementById("beat");
-						var about = document.getElementById("about");
-
-						var message = document.getElementById("title");
-
-						var reset = (newmsg) => {
-							var parent = message.parentElement;
-							parent.removeChild(message);
-							message = parent.appendChild(document.createElement("h1"));
-							message.className = "title";
-							message.id = "title";
-							message.innerHTML = newmsg
-						}
-
-						beat.onmouseover       = function() { reset("Check out my music!"); }
-						beat.onmouseout        = function() { reset("CHIDI BEATS"); }
-						about.onmouseover      = function() { reset("Learn about me..."); }
-						about.onmouseout       = function() { reset("CHIDI BEATS"); }
-					}
-				</script>
+		<div aria-label="Newest Photos">
+			<div class="carousel" data-carousel>
+				<button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+				<button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+				<ul data-slides>
+				<li class="slide" data-active>
+					<a href="https://soundcloud.com/idkbeats-1234/today-turned-out-pretty-alright">
+						<img src="https://i1.sndcdn.com/artworks-5yRRooIUqlFIJGeJ-dRj6zQ-t500x500.jpg" alt="Nature Image #1" width="400px" height="400px">
+					</a>
+				</li>
+				<li class="slide">
+					<a href="https://soundcloud.com/idkbeats-1234/forgot-my-umbrella-but-whatever">
+						<img src="https://i1.sndcdn.com/artworks-Cr5Q1n9QIKnqooAb-blGh5g-t500x500.jpg" alt="Nature Image #2" width="400px" height="400px">
+					</a>
+				</li>
+				<li class="slide">
+					<a href="https://soundcloud.com/idkbeats-1234/big-taiko">
+						<img src="https://i1.sndcdn.com/artworks-x0ECfNN8ZwjW48Lr-9Eyr1A-t500x500.jpg" alt="Nature Image #3" width="400px" height="400px">
+					</a>
+				</li>
+				</ul>
 			</div>
 		</div>
+		<script>
+			const buttons = document.querySelectorAll("[data-carousel-button]")
+
+			buttons.forEach(button => {
+				button.addEventListener("click", () => {
+					const offset = button.dataset.carouselButton === "next" ? 1 : -1
+					const slides = button
+					.closest("[data-carousel]")
+					.querySelector("[data-slides]")
+
+					const activeSlide = slides.querySelector("[data-active]")
+					let newIndex = [...slides.children].indexOf(activeSlide) + offset
+					if (newIndex < 0) newIndex = slides.children.length - 1
+					if (newIndex >= slides.children.length) newIndex = 0
+
+					slides.children[newIndex].dataset.active = true
+					delete activeSlide.dataset.active
+				})
+			})
+
+			window.onload = initDivMouseOver;
+
+			function initDivMouseOver() {
+				var beat = document.getElementById("beat");
+				var about = document.getElementById("about");
+
+				var message = document.getElementById("title");
+
+				var reset = (newmsg) => {
+					var parent = message.parentElement;
+					parent.removeChild(message);
+					message = parent.appendChild(document.createElement("h1"));
+					message.className = "title";
+					message.id = "title";
+					message.innerHTML = newmsg
+				}
+
+				beat.onmouseover       = function() { reset("Check out my music!"); }
+				beat.onmouseout        = function() { reset("CHIDI BEATS"); }
+				about.onmouseover      = function() { reset("Learn about me..."); }
+				about.onmouseout       = function() { reset("CHIDI BEATS"); }
+			}
+		</script>
 	</body>
 </html>
