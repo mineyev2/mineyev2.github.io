@@ -19,7 +19,6 @@ function setup() {
 	w = window.innerWidth;
   	canvas = createCanvas(w, h);
 	// don't really know if this is necessary
-	canvas.style('display', 'block');
 	// canvas.style('z-index', '-2');
   	canvas.parent("canv");
 	

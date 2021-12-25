@@ -273,3 +273,7 @@ a {
 .carousel-button.next {
   right: 30%;
 }
+
+p {
+  font-family: "MyWebFont";
+}
