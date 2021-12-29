@@ -23,12 +23,12 @@ function setup() {
   	canvas.parent("canv");
 	
 	// deleted background, dunno if I should or not
-	background('rgba(0,0,0, 0.6)');
 	// background.style('z-index', '-2');
 }
 
 function draw() {
-
+	background('rgba(0,0,0, 0.6)');
+	gif_createImg.resize(0, h);
 	gif_createImg.position(0, 0);
 	gif_createImg.style('z-index', '-3');
 }
