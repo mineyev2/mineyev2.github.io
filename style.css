@@ -3,7 +3,14 @@
   src: url('assets/slkscreb.ttf');
 }
 
-html, body { overscroll-behavior: none; }
+html, body { 
+  overscroll-behavior: none;
+}
+
+body {
+  background-image: url("assets/background1.gif");
+  background-size: cover;
+}
 
 #main  {
 	position: relative;
