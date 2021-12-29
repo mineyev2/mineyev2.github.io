@@ -3,6 +3,8 @@
   src: url('assets/slkscreb.ttf');
 }
 
+html, body { overscroll-behavior: none; }
+
 #main  {
 	position: relative;
 	margin: 0; 
