@@ -28,9 +28,9 @@ function setup() {
 
 function draw() {
 	background('rgba(0,0,0, 0.6)');
-	gif_createImg.resize(0, h);
+	/*gif_createImg.resize(0, h);
 	gif_createImg.position(0, 0);
-	gif_createImg.style('z-index', '-3');
+	gif_createImg.style('z-index', '-3');*/
 }
 
 window.onresize = function() {
