@@ -17,7 +17,7 @@ body {
 	margin: 0; 
 	height: 100%;
 	width:  100%;
-	overflow:hidden;
+	overflow: hidden;
 }
 
 #main2  {
@@ -53,6 +53,7 @@ canvas {
   letter-spacing: .15em; /* Adjust as needed */
   text-align:center;
 }
+
 
 @keyframes flicker {
 	0% {
@@ -107,29 +108,8 @@ h2 {
   font-family: "MyWebFont";
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: blueviolet; }
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-}
-
-.dock {
-  display: flex;
-  justify-content: center;
+h2:hover {
+  color: #888
 }
 
 .icon {
@@ -152,10 +132,6 @@ li {
   display: flex;
   padding-top: 1%;
   padding-left: 2%;
-}
-
-.logo-text {
-  font-size: 36px;
 }
 
 .main_list {
@@ -275,12 +251,8 @@ a {
   outline: 1px solid black;
 }
 
-.carousel-button.prev {
-  left: 30%;
-}
-
 .carousel-button.next {
-  right: 30%;
+  right: 0;
 }
 
 p {
