@@ -249,8 +249,12 @@ a {
   outline: 1px solid black;
 }
 
+.carousel-button.prev {
+  left: calc(50% - 250px);
+}
+
 .carousel-button.next {
-  right: 0;
+  right: calc(50% - 250px);
 }
 
 p {
