@@ -38,7 +38,6 @@ canvas {
 	font-family: 'MyWebFont';
 	font-size: 50px;
 	position: relative;
-  line-height: 200px;
   text-align: center;
   width: 100%;
   animation: flicker 1s 
@@ -136,7 +135,7 @@ li {
 }
 
 .main_list {
-  position:absolute;
+  position: absolute;
   right: 10px;
 }
 
