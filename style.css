@@ -8,12 +8,13 @@ html, body {
 }
 
 body {
-  background-image: url("assets/background1.gif");
+  
   background-size: cover;
   background-attachment: fixed;
 }
 
 #main  {
+  background-image: url("assets/background1.gif");
 	position: relative;
 	margin: 0; 
 	height: 100%;
@@ -22,6 +23,7 @@ body {
 }
 
 #main2  {
+  background-image: url("assets/background2.gif");
 	position: relative;
 	margin: 0; 
 	height: 100%;
